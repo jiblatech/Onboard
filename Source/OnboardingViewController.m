@@ -28,7 +28,7 @@ static NSString * const kSkipButtonText = @"Skip";
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:UIApplicationWillEnterForegroundNotification];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:UIApplicationWillEnterForegroundNotification];
 }
 
 #pragma mark - Initializing with images
@@ -99,7 +99,7 @@ static NSString * const kSkipButtonText = @"Skip";
     self.moviePlayerController = [MPMoviePlayerController new];
     
     // Handle when the app enters the foreground.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAppEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAppEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
     
     return self;
 }
